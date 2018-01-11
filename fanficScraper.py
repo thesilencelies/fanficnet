@@ -88,10 +88,10 @@ def generate_ffnet_search_res(url):
 def run(args):
         urls = generate_ffnet_search_res(args.url)
         data = ""
-        for u in urls:
-                data = data + fan_fic_net_parse(u)
         with open(args.destination, "w") as f:
-                f.write(data)
+                f.write( fan_fic_net_parse(u) )
+				f.write("|")#Special character for end of story
+
 
 
 if __name__ == "__main__":
