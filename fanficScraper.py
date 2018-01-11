@@ -86,13 +86,12 @@ def generate_ffnet_search_res(url):
 
 #main run function
 def run(args):
-        urls = generate_ffnet_search_res(args.url)
-        with open(args.destination, "w") as f:
+    urls = generate_ffnet_search_res(args.url)
+    with open(args.destination, "w") as f:
             f.write( fan_fic_net_parse(u) )
-			f.write("|")#Special character for end of story
+            f.write("|")#Special character for end of story
 
-
-
+            
 if __name__ == "__main__":
         parser = argparse.ArgumentParser()
         parser.add_argument("-a3", help="toggles the function to parse Ao3 rather than fanfiction.net", action="store_true")
